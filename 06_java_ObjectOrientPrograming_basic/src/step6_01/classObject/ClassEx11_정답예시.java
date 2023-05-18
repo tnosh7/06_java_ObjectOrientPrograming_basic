@@ -42,7 +42,7 @@ public class ClassEx11_정답예시 {
 		
 		Ex11 e = new Ex11();
 
-		for (int i = 0; i < e.arAcc.length; i++) {
+		for (int i = 0; i < e.arAcc.length; i++) {	//전쳬계좌ㅣ
 			e.arAcc[i] = "";
 			e.arPw[i] = "";
 		}
@@ -110,8 +110,8 @@ public class ClassEx11_정답예시 {
 					continue;
 				}
 				
-				for (int i = e.identifier; i < e.accCnt - 1; i++) {
-					e.arAcc[i] = e.arAcc[i + 1];
+				for (int i = e.identifier; i < e.accCnt - 1; i++) {	//e.accCnt -1 잊지말기 
+					e.arAcc[i] = e.arAcc[i + 1];					// -1안하면 인덱스 범위 오류나옴
 					e.arPw[i] = e.arPw[i + 1];
 					e.arMoney[i] = e.arMoney[i + 1];
 				}
@@ -181,8 +181,8 @@ public class ClassEx11_정답예시 {
 				System.out.print("[이체]계좌번호를 입력하세요 : ");
 				String acc = scan.next();
 				
-				int check = -1;
-				for (int i = 0; i < e.accCnt; i++) {
+				int check = -1;						//idx변수를 따로 둘 필요없이 
+				for (int i = 0; i < e.accCnt; i++) {//check로 인덱스와 != 조건 확인하기 
 					if (e.arAcc[i].equals(acc)) {
 						check = i;
 					}

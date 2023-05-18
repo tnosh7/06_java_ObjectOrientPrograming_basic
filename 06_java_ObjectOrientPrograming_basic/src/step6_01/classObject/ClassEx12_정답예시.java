@@ -60,7 +60,7 @@ public class ClassEx12_정답예시 {
 				break;
 			}
 			
-			if (e.win == 0 && e.turn == 9) {
+			if (e.win == 0 && e.turn == 9) {//
 				System.out.println("비겼다.");
 				break;
 			}
