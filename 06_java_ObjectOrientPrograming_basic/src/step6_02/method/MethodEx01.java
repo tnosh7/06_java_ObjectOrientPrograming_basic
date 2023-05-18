@@ -34,7 +34,7 @@ class MethodEx {
 		System.out.println("5. 종료");
 		System.out.println("==========");
 		System.out.println();
-		//return; //반환 데이터가 없을 경우 return 키워드가 생각가능하다. //return 아웃풋데이터;
+		//return; //반환 데이터가 없을 경우 return 키워드가 생략가능하다. //return 아웃풋데이터;
 	}
 }
 
