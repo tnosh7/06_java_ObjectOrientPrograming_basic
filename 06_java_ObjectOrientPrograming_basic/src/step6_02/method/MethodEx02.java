@@ -17,7 +17,7 @@ import java.io.IOException;
  * */ //void return
 class MethodType { 
 	
-	// 입력데이터도 없고 결과데이터도 없는 경우 (00)
+	// 입력데이터도 없고 결과데이터도 없는 경우 (00)				//returnX 결과데이터X //e.뭐뭐 없으면
 	void type00() { 
 		
 		System.out.println("==========");
@@ -86,7 +86,7 @@ public class MethodEx02 {
 	
 		// 입력데이터는 없고 결과데이터는 있는 경우(01)
 		System.out.println("PI : " + methodType.type01());
-		double pi = methodType.type01();
+		double pi = methodType.type01();					
 		System.out.println("PI : " + pi);
 		System.out.println();
 

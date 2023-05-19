@@ -47,6 +47,7 @@ public class MethodEx10_정답예시 {
 		int cnt = e.test1(arr);				//class안에 조건식을 적용하고 arr로 리턴해줌 이때 클래스안에 
 		System.out.println("cnt = " + cnt);	//변수명과 같아야 함 / arr=cnt값 / 돌려받는 변수가 있거나
 											//e.test1(arr) 이렇게 써서 적용시켜야 값이 나옴.
+		
 		// 문제 2) 4의 배수의 개수만큼의 새로운 배열을 만들고, 4의 배수를 저장후 배열을 리턴해주는 메서드
 		int[] temp = e.test2(arr);					
 		System.out.println(Arrays.toString(temp));
