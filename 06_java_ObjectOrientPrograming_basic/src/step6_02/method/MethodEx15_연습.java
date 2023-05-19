@@ -9,7 +9,7 @@ import java.util.Scanner;
  * 3. 숫자 2를 입력하면, 캐릭터가 오른쪽으로이동한다.
  * 4. 좌우 끝에 도달했을 때 에러가 발생하지 않도록 예외처리를 해준다.
  */
-
+//일단 게임문제 출력, 메뉴 출력 , 이동할때 조건(왼/오), 그다음 런 .? 
 class NumberGame{
 	
 	Scanner scan = new Scanner(System.in);
@@ -18,6 +18,9 @@ class NumberGame{
 	int playerLocation = 4;
 	
 	void printPlay() {
+	
+		
+		
 		
 		for (int i = 0; i < move.length; i++) {
 			if (move[i] == 0) 	System.out.print("[ ]"); 

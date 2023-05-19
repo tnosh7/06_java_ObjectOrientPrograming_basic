@@ -3,7 +3,8 @@ package step6_02.method;
 import java.util.Scanner;
 
 //# 틱택토
-
+//1. 게임 출력 조건 설정 2. 게임출력 3. 메뉴출력 4.선택에 따른 조건 설정  
+//6.run 게임조건,while문 안에서 게임출력 /메뉴출력(scanner)/승리조건 run에서 설정 ./cnt/   
 class TicTacToe{
 	
 	Scanner scan = new Scanner(System.in);
