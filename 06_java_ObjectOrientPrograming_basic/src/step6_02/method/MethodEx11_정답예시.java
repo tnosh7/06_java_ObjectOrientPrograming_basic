@@ -9,7 +9,7 @@ class Ex11{
 			tot += arr[i];
 		}
 		
-		return tot;
+		return tot;		//리턴의 변수명은 중요하지 않음 .
 		
 	}
 	
