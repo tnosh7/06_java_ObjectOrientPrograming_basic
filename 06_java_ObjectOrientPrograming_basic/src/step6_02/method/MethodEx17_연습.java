@@ -18,7 +18,7 @@ class TicTacToe{
 		
 		for (int i = 0; i < game.length; i++) {
 			for (int j = 0; j < game[i].length; j++) {
-				game[i][j] = " ";
+				game[i][j] = " "; 	//빈칸
 			}
 		}
 		
@@ -31,7 +31,7 @@ class TicTacToe{
 		System.out.println("== 틱택톡 ==");
 		for (int i = 0; i < game.length; i++) {
 			for (int j = 0; j < game[i].length; j++) {
-				System.out.print("[" + game[i][j] + "]");
+				System.out.print("[" + game[i][j] + "]");	//여기서 
 			}
 			System.out.println();
 		}
@@ -51,7 +51,7 @@ class TicTacToe{
 			int xIdx = scan.nextInt();
 			
 			if (game[yIdx][xIdx].equals(" ")) {
-				game[yIdx][xIdx] = "O";
+				game[yIdx][xIdx] = "O";			//O만 []없이
 				turn += 1;
 			}
 			else {
@@ -77,7 +77,7 @@ class TicTacToe{
 		
 	}
 	
-	
+	//for문 잊지말것 
 	void exitWidth() {
 		for (int i = 0; i < game.length; i++) {
 			if (game[i][0].equals("O") && game[i][1].equals("O") && game[i][2].equals("O")) win = 1;
@@ -104,7 +104,7 @@ class TicTacToe{
 	
 	void run() {
 		
-		setGame();
+		setGame();	//while문 밖에서 
 		
 		while(true) {
 			

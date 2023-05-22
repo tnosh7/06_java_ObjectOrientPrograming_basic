@@ -57,7 +57,7 @@ public class ClassEx10_정답예시 {
 				
 				sel--;
 				e.orderCnt[sel]++;
-				isInsufficient = false;
+				isInsufficient = false;				//주문받았을때 변수 설정하기 !!!!!!
 				
 			}
 			

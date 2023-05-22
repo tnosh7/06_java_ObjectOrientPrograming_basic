@@ -32,8 +32,8 @@ class Ex07 {
 		
 		for (int i = 2; i <= primeNumber; i++) {
 			int count  = 0;
-			for (int n = 1; n <= i; n++) {
-				if (i % n == 0) {
+			for (int n = 1; n <= i; n++) { //%조심
+				if (i % n == 0) {	
 					count++;
 				}
 			}
@@ -56,8 +56,8 @@ public class MethodEx07_정답예시 {
 		
 		// 문제 1) num이 홀수인지 짝수인지 출력하는 메서드 
 		
-		int num = 19;
-		e.printEvenOrOdd(num);
+		int num = 19;	//
+		e.printEvenOrOdd(num);		//클레스속 이름 ()
 
 		
 		

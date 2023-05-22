@@ -57,7 +57,7 @@ public class ClassEx06_정답예시 {
 		for (int i = 0; i < e.hgd.length; i++) {
 			if (e.answer[i] == e.hgd[i]) {
 				e.answerCnt += 1;
-				System.out.print("O ");
+				System.out.print("O ");//char 변수를 쓰지 않고  프린트를 이용
 			}
 			else {
 				System.out.print("X ");

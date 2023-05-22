@@ -2,6 +2,7 @@ package step6_01.classObject;
 
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 /*
  * # OMR카드 : 클래스 + 변수
@@ -16,8 +17,7 @@ import java.util.Random;
  * 성적        = 40점
  */
 
-
-class Ex06_풀이{
+class Ex06_e{
 	int[] answer = {1, 3, 4, 2, 5};		// 시험답안
 	int[] hgd = new int[5];				// 학생답안
 	
@@ -26,32 +26,30 @@ class Ex06_풀이{
 }
 
 
+
 public class ClassEx06_풀이 {
 
 	public static void main(String[] args) {
-		Ex06_풀이 answ = new Ex06_풀이();
+		Ex06_e e = new Ex06_e();
+		
 		Random ran = new Random();
+		Scanner scan = new Scanner(System.in);
 		
-		
-		char[]tmp = {'X','X','X','X','X'};	
-		for (int i = 0; i < answ.hgd.length; i++) {
-			answ.hgd[i] = ran.nextInt(5)+1;
-		}
-		for (int i = 0; i < answ.answer.length; i++) {
-			if (answ.answer[i] == answ.hgd[i]) {
-				answ.answerCnt++;
-				answ.score += 20;
-				tmp[i] = 'O';
+		System.out.print("answer: " + Arrays.toString(e.answer) + " ");
+		for (int i = 0; i < e.hgd.length; i++) {
+			e.hgd[i]  = ran.nextInt(5)+1;
+ 		}
+		System.out.print("\nh g d : " + Arrays.toString(e.hgd) + " ");
+		System.out.print("\n정 오 표 : [ ");
+		for (int i = 0; i < e.answer.length; i++) {
+			if (e.answer[i] == e.hgd[i]) {
+				System.out.print("O ");
+				e.answerCnt++;
 			}
+			else System.out.print("X ");
 		}
-		System.out.print(Arrays.toString(answ.answer)+" ");
-		System.out.println();
-		System.out.print(Arrays.toString(answ.hgd)+" ");
-		System.out.println();
-		System.out.print(Arrays.toString(tmp)+" ");
-		System.out.println("\n성적 : " + answ.score + "점");
-		
-		
+		System.out.println("]");
+		System.out.println("성     적 : " + (e.answerCnt * 20) + "점");
 		
 	}
 

@@ -12,6 +12,7 @@ import java.util.Scanner;
  * 4. 모든 카드가 뒤집히면(back배열의 0이 사라지면) 게임은 종료된다. 
  */
 //먼저 카드 섞기. 카드출력,메뉴 , 선택조건,  run = 카드출력,,메뉴, 선택하기(scanner), 게임종료  
+//break를 써야 하는 구문은 run에서 쓰기 
 class MemoryGame{
 	
 	Scanner scan = new Scanner(System.in);

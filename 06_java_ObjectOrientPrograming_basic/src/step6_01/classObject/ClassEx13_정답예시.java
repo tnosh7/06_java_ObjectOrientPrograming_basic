@@ -63,7 +63,7 @@ public class ClassEx13_정답예시 {
 			int idx = scan.nextInt();
 			
 			if (e.front[idx] == gameNum) {
-				if (1 <= gameNum && gameNum <= e.SIZE) {
+				if (1 <= gameNum && gameNum <= e.SIZE) {	//cnt로 확인하는 방버.ㅂ
 					e.front[idx] = e.back[idx];
 				}
 				else if (e.SIZE < gameNum && gameNum <= 18) {

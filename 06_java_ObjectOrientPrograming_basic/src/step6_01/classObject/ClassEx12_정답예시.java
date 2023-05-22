@@ -37,7 +37,7 @@ public class ClassEx12_정답예시 {
 		
 		for (int i = 0; i < e.game.length; i++) {
 			for (int j = 0; j < e.game[i].length; j++) {
-				e.game[i][j] = "[ ]";
+				e.game[i][j] = "[ ]";	//초깃값 안 넣으면 null오류 나옴
 			}
 		}
 	

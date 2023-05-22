@@ -1,4 +1,7 @@
 package step6_01.classObject;
+
+import java.util.Scanner;
+
 /*
  * # 영수증 출력하기 : 클래스 + 변수
  * 1. 햄버거 주문을 받아 영수증을 출력한다.
@@ -18,75 +21,59 @@ package step6_01.classObject;
  *잔       돈		1200
  */
 
-import java.util.Scanner;
-
-class Ex10_풀이 {
+class Ex10_v {
 	
 	int[] menuPrices   = {    2500,       3800,     1500,  1000};
-	String[] menuNames = {"치즈버거  ", "불고기버거", "감자튀김  ", "콜      라 "};
+	String[] menuNames = {"치즈버거", "불고기버거", "감자튀김", "콜라"};
 	int[] orderCnt = new int[4];
 	int totalPrice = 0;
 	
 }
 
-
 public class ClassEx10_풀이 {
 
 	public static void main(String[] args) {
+		Ex10_v e = new Ex10_v();
+		
 		Scanner scan = new Scanner(System.in);
-		Ex10_풀이 aa = new Ex10_풀이();
 		
 		while (true) {
-			System.out.println("========맘스터치========");
-			System.out.println("ITEM\tQTY\tAMT");
-			for (int i = 0; i < aa.menuPrices.length; i++) {
-				System.out.println((i+1) + "번. " + aa.menuNames[i] + " : " + aa.menuPrices[i]+ "원");
+			System.out.println("======== 빅 버거 ========");
+			for (int i = 0; i < e.menuNames.length; i++) {
+				System.out.println((i+1) + ". " + e.menuNames[i] + " : " + e.menuPrices[i] + "원");
 			}
-			System.out.println("----------------------");
-			
-			System.out.print("1.주문 2.영수증출력 :");
-			int menu = scan.nextInt();
-			
-			if (menu == 1) {
-			
-				System.out.print("메뉴선택(1~4) : ");
-				int sel = scan.nextInt();
-
-				if (sel == 1) {
-					aa.orderCnt[0]++;
-				}
+			System.out.print(">>>>> 1)주문 \t2)영수증 출력 : ");
+			int sel = scan.nextInt();
+			if (sel == 1) {
+				System.out.print(">>>>> 메뉴번호 선택 : ");
+				int idx = scan.nextInt()-1;
 				
-				else if (sel == 2) {
-					aa.orderCnt[1]++;
-				}
+				e.orderCnt[idx]++;
 				
-				else if (sel == 3) {
-					aa.orderCnt[2]++;
-				}
-				
-				else if (sel == 4) {
-					aa.orderCnt[3]++;
-				}
 			}
-			else if (menu ==2 ) {
-				System.out.println("========맘스터치========");
+			else if (sel == 2) {
+				System.out.println("-------------------");
 				System.out.println("ITEM\tQTY\tAMT");
-				for (int i = 0; i < aa.menuPrices.length; i++) {
-					aa.totalPrice += aa. orderCnt[i] * aa.menuPrices[i];
-					System.out.println("*" + aa.menuNames[i] + " :  " 
-					+ aa.orderCnt[i] +" : " + aa.menuPrices[i]+ "원");
+				for (int i = 0; i < e.menuNames.length; i++) {
+					System.out.println(e.menuNames[i] + "\t" + e.orderCnt[i]+"\t"+ e.menuPrices[i]);
 				}
-				System.out.println("----------------------");
-				System.out.println(">>합계 금액 : " + aa.totalPrice  );
-				System.out.print(">>지불액 입력 : ");
-				int money =scan.nextInt();
-				System.out.println(">>받은 금액 : " + money);
-				System.out.println("----------------------");
-				System.out.println(">>잔돈 : " + (money - aa.totalPrice) + "원");
+				System.out.println("-------------------");
+				for (int i = 0; i < e.menuPrices.length; i++) {
+					e.totalPrice += (e.orderCnt[i] * e.menuPrices[i]);
+				}
+				System.out.println(">>합계금액 : " + e.totalPrice);
+				System.out.print("지불액 입력 : ");
+				int money = scan.nextInt();
+				System.out.println("잔액 = " + (money-e.totalPrice) + "원");
+				System.out.println("이용해주셔서 감사합니다.");
 				break;
 			}
 		}
-		scan.close();
+			
+			
+			
+			
+		
 	}
 
 }

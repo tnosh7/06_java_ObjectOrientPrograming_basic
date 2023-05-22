@@ -1,102 +1,122 @@
 package step6_02.method;
 
 import java.util.Arrays;
-
-class Ex12_풀이 {
+class Ex12_v {
 	
-	//Math.abs(param);
 	// 1. 절대값을 리턴하는 myABS 메서드를 만드시오.
 	int myABS(int param) {
-		if (param > 0 ) {
-			return param;
+		if (param < 0 ) {
+			param *= -1;
 		}
-		else {
-			return param * -1;
-			
-		}
-	}
+		else param = param;
+		return param;}
 	
 	// 2. 이메일에 '@'가 있는지를 체크하는 checkEmailValidation 메서드를 만드시오.
-	boolean checkEmailValidation(String email) {
-		
-		boolean isRun = false; 
-		
+	boolean checkEmailValidation(String email) {	//for문
+//		boolean isRun = false;
+//		int check = email.indexOf('@');
+//		if (check < email.length() && check >= 0) isRun = true;
+//		else isRun = false;
+		boolean isRun = false;
 		for (int i = 0; i < email.length(); i++) {
-			if ('@' == email.charAt('@')) {
+			if('@' == email.charAt(i)) {
 				isRun = true;
 			}
 		}
-		return isRun;
-		}
-	
+		return isRun;}
 	
 	// 3. 파일의 확장자를 리턴하는 getFileExtention 메서드를 만드시오.
-	String getFileExtention(String fileName) {
-		int tmp = fileName.length();
-		   fileName.substring(tmp-4, tmp-1);
-		
-		
-		return fileName.substring(tmp-4, tmp-1);
+	String getFileExtention(String fileName) { //for문 charAt
+//		String check = fileName.substring(fileName.length()-3, fileName.length());
+		int check = 0;
+		for (int i = 0; i < fileName.length(); i++) {
+			if ('.' == fileName.charAt(i)) {
+				check = i;
+			}
 		}
+		return fileName.substring(check+1);}
 	
 	// 4. 숫자의 제곱을 계산하여 리턴하는 myPow 메서드를 만드시오.
 	int myPow(int param1 , int param2) {
-		int answer = (param1*param1) * param2-1; 
-		
-		return answer;
+		int ox = 1;
+		for (int i = 0; i < param2; i++) {
+			ox *= param1;
+		}
+				 
+		return ox;
 		}
 	
 	// 5. 문자열에 특정 문자의 위치를 리턴하는 myIndexOf 메서드를 만드시오.
-	int myIndexOf(String data , String word) {
-		int idx = 0;
-		char tmp = data.charAt(Integer.parseInt(word));
-		for (int i = 0; i < tmp; i++) {
-			idx = i;
+	int myIndexOf(String data , String word) { //for문charAt
+//		int idx = data.indexOf(word);		
+		int idx = 0;;
+		for (int i = 0; i < data.length(); i++) {
+			String tmp = data.charAt(i) + "";
+			if (tmp.equals(word)) {
+				idx = i;
+				break;
+			}
 		}
-		int answer = data.length() - idx;
-		return answer;
-		}
+		
+		return idx;}
 	
 	// 6. 문자열에 특정 위치의 문자를 리턴하는 myCharAt 메서드를 만드시오.
 	// 문자열을 문자 배열로 저장) > [안배운문법] 문자열.toCharArray()
 	// 예시)                      > char[] 변수 = 문자열.toCharArray();
 	char myCharAt(String data , int index) {
-		char tmp = ' ';
-		char[] 변수 = data.toCharArray();
-		for (int i = 0; i < 변수.length; i++) {
-			tmp = 변수[index]; 
-		}
-		return tmp;
-		}
+		char[] idx = data.toCharArray();
+		System.out.println(idx);// just do it!  전체문장나옴
+		
+		return idx[index];}
 	
 	// 7-1. 문자열의 특정위치부터 끝까지의 잘라진 문자열을 리턴하는 mySubString1 메서드를 만드시오.
-	String mySubString1(String data , int startIndex) {
-		
-		String answer = data.substring(startIndex, data.length()-1);
-		
-		
-		return answer;
+	String mySubString1(String data , int startIndex) {//for문 charAt
+//		String check = data.substring(startIndex, data.length());
+		String result = "";
+		for (int i = startIndex; i < data.length(); i++) {
+			result += data.charAt(i);
 		}
+		
+		return result;}
+	
+	
 	
 	// 7-2. 문자열의 특정위치부터 특정위치까지의 잘라진 문자열을 리턴하는 mySubString2 메서드를 만드시오.
-	String mySubString2(String data , int startIndex , int endIndex) {
-		char idx = ' ';
-		for (int i = 0; i < data.length(); i++) {
-			char tmp = data.charAt(i);
-			if (i == startIndex) {
-				idx = data.charAt(i);
-			}
+	String mySubString2(String data , int startIndex , int endIndex) {//for문 charAt
+//		String check = data.substring(startIndex, endIndex);
+		String check = "";
+		for (int i = startIndex; i < endIndex; i++) {
+			check += data.charAt(i);
 		}
 		
-		return "";
-		}
-		
-		
-		
-	
+		return check;}
 	
 	// 8. 문자열을 특정 키워드로 잘라내어 배열에 담아서 리턴하는 mySplit 메서드를 만드시오.
-	String[] mySplit(String data , String sep) {return null;}
+	String[] mySplit(String data , String sep) {//for문 charAt
+//		String[]tmp = data.split(sep);
+		int cnt =  0;
+		for (int i = 0; i < data.length(); i++) {
+			String tmp = data.charAt(i) + "";
+			if(tmp.equals(sep)) {
+				cnt++;
+			}
+		}
+		String[]sub = new String[cnt+1];
+		int idx =0;
+		for (int i = 0; i < sub.length; i++) {
+			String word = "";
+			for (int j = idx; j < data.length(); j++) {
+				String temp = data.charAt(j) + "";
+				if(temp.equals(sep)) {
+					idx = j+1;
+					break;
+				}
+				word +=data.charAt(j);
+				idx++;
+			}
+			sub[i] = word;
+		}
+		return sub;}
 	
 }
 
@@ -104,7 +124,7 @@ public class MethodEx12_풀이 {
 
 	public static void main(String[] args) {
 
-		Ex12_풀이 e = new Ex12_풀이();
+		Ex12_v e = new Ex12_v();
 		
 		// 1. 절대값을 리턴하는 myABS 메서드를 만드시오.
 		System.out.println(e.myABS(3));   // 3

@@ -94,9 +94,9 @@ class Theater{
 			
 			// 메뉴 선택하기
 			System.out.print("메뉴 선택 : ");
-			int choice = scan.nextInt();
-			
-			// 예매하기
+			int choice = scan.nextInt(); //while문 안에 넣어야해서 
+										///run안에 집어넣음 
+			// 예매하기			
 			if (choice == 1) {
 				choiceSeat();
 			}
