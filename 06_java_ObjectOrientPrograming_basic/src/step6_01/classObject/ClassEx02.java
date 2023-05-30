@@ -21,7 +21,7 @@ class Product {
 public class ClassEx02 {
 
 	public static void main(String[] args) {
-		
+
 		// ClassEx01에서 생성한 클래스 
 		Member member = new Member();
 		member.id = "qwer1234";
