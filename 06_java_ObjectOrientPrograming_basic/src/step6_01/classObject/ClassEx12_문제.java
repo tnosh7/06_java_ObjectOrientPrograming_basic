@@ -14,20 +14,20 @@ package step6_01.classObject;
  * 
  */
 
-/*
-class Ex12{
-	String[][] game = new String[3][3];
-	
-	int turn = 0;
-	int win = 0;		
-}
-*/
+import java.util.Scanner;
+
+//class Ex12{
+//	String[][] game = new String[3][3];
+//	
+//	int turn = 0;
+//	int win = 0;		
+//}
+
 
 
 public class ClassEx12_문제 {
 	
 	public static void main(String[] args) {
-
 	}
 
 }
