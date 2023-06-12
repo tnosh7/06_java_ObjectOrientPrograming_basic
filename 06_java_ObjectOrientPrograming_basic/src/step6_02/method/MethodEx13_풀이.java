@@ -19,7 +19,7 @@ import java.util.Random;
 //답안 출력 // hgd 입력 // 정오표 출력+성적 // run
 
 class ScoreMn {
-	
+	//정오표 변수배열을 정의하지 않고 그냥 print로 해결 
 	Random ran = new Random();
 	
 	int[] omr = {1, 4, 3, 2, 5};		// 모범답안

@@ -25,7 +25,7 @@ import java.util.Scanner;
  * ----------------------
  * 매출액 : 24000원
  */
-//메뉴 좌석조건 현황 매출 run 안에서 메뉴선택하기 .ㄴ
+//돈까지 세분화하기 
 class Theate{
 	
 	Scanner scan = new Scanner(System.in);

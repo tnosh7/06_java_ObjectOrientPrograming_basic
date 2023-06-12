@@ -77,7 +77,6 @@ public class MethodEx02 {
 		methodType.type10("팀 버너스리.txt");
 		methodType.type10("데니스 리치.txt");
 		methodType.type10("제임스 고슬링.txt");
-		
 //		methodType.type10('C'); // 에러 (파라메타의 타입이 일치해야 한다.)
 //		methodType.type10(100);
 		

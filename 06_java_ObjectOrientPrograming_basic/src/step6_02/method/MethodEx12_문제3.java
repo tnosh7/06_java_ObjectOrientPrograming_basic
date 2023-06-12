@@ -1,98 +1,44 @@
 package step6_02.method;
 
 import java.util.Arrays;
-class Ex122 {
+class E12 {
 	
 	// 1. 절대값을 리턴하는 myABS 메서드를 만드시오.
-	int myABS(int param) {
-		if(param < 0 ) param *=-1;
-		return param;
-	}
+	int myABS(int param) {return 0;}
 	
 	// 2. 이메일에 '@'가 있는지를 체크하는 checkEmailValidation 메서드를 만드시오.
-	boolean checkEmailValidation(String email) {
-		char a = ' ';
-		boolean isCheck = false;
-		for (int i = 0; i < email.length(); i++) {
-			a = email.charAt(i);
-			if (a == '@') {
-				isCheck = true;
-			}
-		}
-		return isCheck;}
+	boolean checkEmailValidation(String email) {return false;}
 	
 	// 3. 파일의 확장자를 리턴하는 getFileExtention 메서드를 만드시오.
-	String getFileExtention(String fileName) {
-		// charAt을 이용한 풀이1
-		String file = "";
-		char a = ' ';
-		int idx =0 ;
-		for (int i = 0; i < fileName.length(); i++) {
-			a = fileName.charAt(i);
-			if (a == '.') {
-				idx = i;
-			}
-		}
-		for (int i = idx + 1; i < fileName.length(); i++) {
-			file += fileName.charAt(i);
-		}
-		
-		return file;}
+	String getFileExtention(String fileName) {return "";}
 	
 	// 4. 숫자의 제곱을 계산하여 리턴하는 myPow 메서드를 만드시오.
-	int myPow(int param1 , int param2) {
-		int tol = 0;
-		for (int i = 0; i < 1; i++) {
-			for (int j = 0; j < param2; j++) {
-				tol += (param1 * param1) *j;
-			}
-		}
-		return tol;}
+	int myPow(int param1 , int param2) {return 0;}
 	
 	// 5. 문자열에 특정 문자의 위치를 리턴하는 myIndexOf 메서드를 만드시오.
-	int myIndexOf(String data , String word) {
-		int idx = 0;
-		for (int i = 0; i < data.length(); i++) {
-			if (word.equals(i)) {
-				idx = i;
-			}
-		}
-		return idx;}
+	int myIndexOf(String data , String word) {return 0;}
 	
 	// 6. 문자열에 특정 위치의 문자를 리턴하는 myCharAt 메서드를 만드시오.
 	// 문자열을 문자 배열로 저장) > [안배운문법] 문자열.toCharArray()
 	// 예시)                      > char[] 변수 = 문자열.toCharArray();
-	char myCharAt(String data , int index) {
-		char[] c = data.toCharArray();
-		return '0';}
+	char myCharAt(String data , int index) {return '0';}
 	
 	// 7-1. 문자열의 특정위치부터 끝까지의 잘라진 문자열을 리턴하는 mySubString1 메서드를 만드시오.
-	String mySubString1(String data , int startIndex) {
-		
-		
-		
-		return "";}
+	String mySubString1(String data , int startIndex) {return "";}
 	
 	// 7-2. 문자열의 특정위치부터 특정위치까지의 잘라진 문자열을 리턴하는 mySubString2 메서드를 만드시오.
 	String mySubString2(String data , int startIndex , int endIndex) {return "";}
 	
 	// 8. 문자열을 특정 키워드로 잘라내어 배열에 담아서 리턴하는 mySplit 메서드를 만드시오.
-	String[] mySplit(String data , String sep) {
-		String[]temp = null;
-		for (int i = 0; i < temp.length; i++) {
-			temp = data.split(sep);
-		}
-		
-		return temp;}
+	String[] mySplit(String data , String sep) {return null;}
 	
 }
 
-public class MethodEx12_문제2 {
+public class MethodEx12_문제3 {
 
 	public static void main(String[] args) {
 
-		Ex122 e = new Ex122();
-		
+		E12 e = new E12();
 		// 1. 절대값을 리턴하는 myABS 메서드를 만드시오.
 		System.out.println(e.myABS(3));   // 3
 		System.out.println(e.myABS(-3));  // 3 

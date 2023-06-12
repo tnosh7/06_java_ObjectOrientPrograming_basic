@@ -11,7 +11,7 @@ import java.util.Scanner;
  * 3. 선택한 2장의 카드가 같은 카드이면, back 배열에 표시한다.
  * 4. 모든 카드가 뒤집히면(back배열의 0이 사라지면) 게임은 종료된다. 
  */
-//먼저 카드 섞기. 카드출력,메뉴 , 선택조건,  run = 카드출력,,메뉴, 선택하기(scanner), 게임종료  
+// 카드랑 메뉴 따로 출력   
 class MemoryGam{
 	
 	Scanner scan = new Scanner(System.in);
