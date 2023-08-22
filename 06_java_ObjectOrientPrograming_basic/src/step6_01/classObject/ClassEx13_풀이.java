@@ -22,7 +22,7 @@ class Ex13_v {
 }
 
 
-public class ClassEx13_풇이 {
+public class ClassEx13_풀이 {
 
 	public static void main(String[] args) {
 		Ex13_v e = new Ex13_v();

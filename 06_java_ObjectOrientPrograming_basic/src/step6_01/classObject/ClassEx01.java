@@ -50,7 +50,7 @@ class Member { // 클래스의 이름은 대문자로 시작한다.
 }
 
 
-public class classEx01 {
+public class ClassEx01 {
 
 	public static void main(String[] args) {
 		
