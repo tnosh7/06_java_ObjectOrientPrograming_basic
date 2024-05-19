@@ -1,7 +1,4 @@
 package step6_01.classObject;
-
-import com.sun.java_cup.internal.runtime.Scanner;
-
 /**
  * # 숫자이동[3단계] : 클래스 + 변수
  * 24-05-13
